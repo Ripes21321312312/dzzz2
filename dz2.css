@@ -37,6 +37,7 @@ body
   font-size: 14px;
   font-weight: 400;
   line-height: 17px;
+  padding-left: 20px;
 
 
 }
@@ -51,6 +52,7 @@ body
   font-size: 14px;
   font-weight: 400;
   line-height: 17px;
+  padding-left: 20px;
 }
 
 .text2
@@ -60,6 +62,7 @@ body
   font-weight: 400;
   line-height: 15px;
   color: rgba(66, 66, 66, 1);
+  margin-left: 20px;
 
 
 
@@ -75,11 +78,35 @@ body
   font-size: 14px;
   font-weight: 400;
   line-height: 17px;
+  padding-left: 20px;
 }
 
-.sub_text
+.sub
 {
 margin-top: 25px;
+}
+
+.sub input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+}
+
+.sub a::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #976464;
+  border-radius: 3px;
+  margin-right: 10px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.sub input[type="checkbox"]:checked + a::before {
+  background-image: url("/img/4.svg");
+  border: 1px solid #976464;
 }
 
 .page_tittle1
@@ -88,7 +115,7 @@ margin-top: 25px;
   font-weight: 600;
   line-height: 34px;
   text-align: left;
-  margin-top: 50px;
+  margin-top: 40px;
 }
 
 
@@ -113,4 +140,54 @@ margin-top: 25px;
   line-height: 20px;
   text-align: left;
 
+}
+
+.text_after_btn
+{
+  color: #424242;
+  font-family: Montserrat, serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+
+.radio_btn1
+{
+  margin-top: 10px;
+}
+
+.radio_btn1 input[type="radio"] {
+  display: none;
+
+}
+
+.radio_btn1 input[type="radio"] + label {
+  position: relative;
+  display: flex;
+  padding-left: 30px;
+  padding-top: 15px;
+  cursor: pointer;
+}
+
+.radio_btn1 input[type="radio"] + label::before {
+  content: "";
+  position: absolute;
+  display: flex;
+  width: 31px;
+  height: 31px;
+  left: -5px;
+  top: 10px;
+  border-radius: 50%;
+  border: 1px solid #976464;
+}
+
+.radio_btn1 input[type="radio"]:checked + label::before {
+  display: flex;
+  background-image: url("/img/ellipse14.svg");
+  background-size: 19px 19px;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 1px solid #976464;
 }
